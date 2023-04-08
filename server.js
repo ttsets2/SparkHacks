@@ -16,10 +16,12 @@ async function main(){
         // Connect to the MongoDB cluster
         await client.connect();
         console.log("Connected to DB!!!!");
-
-
         
- 
+        var collection = client.collection("chatDB");
+
+        // var myobj = {"name": "Thomas", "message": "Test input to mongoDB"};
+        collection.chatHistory.insertOne({"name": "Thomas", "message": "Test input to mongoDB"});
+        
     } catch (e) {
         console.error(e);
     } finally {
