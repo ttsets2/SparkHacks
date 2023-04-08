@@ -44,6 +44,12 @@ body {
     max-height: 600px;
     overflow: auto;
 
+
+    @media (max-width: 1000px) {
+        .member-list {
+            display: none;
+        }
+    }
 }
 
 .time{
